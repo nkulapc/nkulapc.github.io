@@ -132,6 +132,7 @@ h1 a, h1 a:hover {
 #introduction {
     font-size: large;
     text-align: justify;
+    line-height: 1.5em;
 }
 
 #canvas {
