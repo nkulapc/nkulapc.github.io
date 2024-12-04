@@ -265,7 +265,6 @@ table.chairs tr td p {
 
 table.chairs tr td a img {
     padding-top: 12px;
-    width: 100%;
     height: 120px;
 }
 
@@ -573,4 +572,30 @@ table.submissions th p, table.submissions td p {
     margin: 0 auto;
     width: 200px;
     border-bottom: 1px solid #000;
+}
+
+/* STUDENT PHOTOS */
+.image-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-container img {
+    width: 70px;
+    height: auto;
+}
+
+/* PAPER & PATENT LIST */
+.paper_list {
+    font-family: Verdana, serif;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.patent_list {
+    text-align: justify;
+    line-height: 1.5em;
 }
