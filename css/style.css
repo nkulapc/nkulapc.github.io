@@ -588,6 +588,14 @@ table.submissions th p, table.submissions td p {
     height: auto;
 }
 
+.image-container .student-photo {
+    text-align: center
+}
+
+.image-container .student-name {
+
+}
+
 /* PAPER & PATENT LIST */
 .paper_list {
     font-family: Verdana, serif;
