@@ -266,15 +266,13 @@ table.chairs tr td p {
 table.chairs tr td a img {
     padding-top: 12px;
     height: 120px;
+    width: 100px;
+    object-fit: cover;
 }
 
-table.chairs tr td p a {
+table.chairs p.name {
     font-size: 16px;
     font-weight: bold;
-}
-
-table.chairs a {
-    text-decoration:none;
     color: #800080;
 }
 
@@ -585,11 +583,13 @@ table.submissions th p, table.submissions td p {
 
 .image-container img {
     width: 70px;
-    height: auto;
+    height: 100px;
+    object-fit: cover;
 }
 
 .image-container .student-photo {
-    text-align: center
+    text-align: center;
+    overflow: hidden;
 }
 
 .image-container .student-name {
