@@ -572,6 +572,65 @@ table.submissions th p, table.submissions td p {
     border-bottom: 1px solid #000;
 }
 
+/* TEACHERS PHOTOS*/
+.teachers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3rem;
+    margin-top: 15px;
+    margin-bottom: -5px;
+}
+
+.teachers img {
+    padding-top: 12px;
+    height: 120px;
+    width: 100px;
+    object-fit: cover;
+    float: left;
+    margin-right: 15px;
+}
+
+.teachers section:nth-of-type(odd) {
+    grid-column: 1;
+}
+
+.teachers section:nth-of-type(even) {
+    grid-column: 2;
+}
+
+.teachers .name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #800080;
+}
+
+.teachers section p:nth-of-type(2) {
+    margin-top: 0;
+    padding-right: 30px;
+    text-align: justify;
+    color: #000;
+    font-size: 14px;
+}
+
+.teachers .titles {
+    color: orangered;
+}
+
+.teachers .terms {
+    font-weight: bold;
+}
+
+#NKU {
+    color: #800080;
+}
+
+#PKU {
+    color: #9b0000;
+}
+
+#Tencent {
+    color: #0152d9;
+}
 /* STUDENT PHOTOS */
 .image-container {
     margin-top: 20px;
