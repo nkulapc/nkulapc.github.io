@@ -712,3 +712,27 @@ table.submissions th p, table.submissions td p {
 .news .news-content li {
     font-size: 16px;
 }
+
+/* LANGUAGE SWITCHER*/
+.language-switcher {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #800080;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-switcher:hover {
+    background-color: #9a009a;
+    transform: scale(1.05);
+}
