@@ -655,8 +655,8 @@ table.submissions th p, table.submissions td p {
 
 }
 
-.graduation-info {
-    font-size: 12px;
+.image-container .graduation-info {
+    font-size: 8px;
     color: #666;
     margin-top: 5px;
     text-align: center;
