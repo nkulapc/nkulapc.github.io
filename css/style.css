@@ -655,6 +655,14 @@ table.submissions th p, table.submissions td p {
 
 }
 
+.graduation-info {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    text-align: center;
+    font-style: italic;
+}
+
 /* PAPER & PATENT LIST */
 .paper_list {
     font-family: Verdana, serif;
