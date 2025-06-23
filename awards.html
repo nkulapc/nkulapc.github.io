@@ -95,6 +95,7 @@
                             <li>河北省三三三人才（第三层次），陈飞</li>
                             <li>南开大学百名青年学科带头人，陈飞</li>
                             <li>2024年，天津市技术发明二等奖，苑晶，刘晓滨</li>
+
                         </ol>
                         <style>
                             .awards-reversed {
@@ -105,35 +106,68 @@
                             
                             .awards-reversed li {
                                 position: relative;
-                                padding-left: 2.5em; /* 基于字体大小的相对单位 */
-                                text-indent: -1em; /* 悬挂缩进，确保文字对齐 */
+                                padding-left: 2.5em;
+                                text-indent: -1em;
                             }
                             
                             .awards-reversed li::before {
                                 content: counter(award-item) ".";
                                 counter-increment: award-item;
                                 display: inline-block;
-                                width: 1.5em; /* 相对于字体大小的宽度 */
+                                width: 1.5em;
                                 text-align: right;
-                                margin-left: -1.5em; /* 向左偏移 */
+                                margin-left: -1.5em;
                                 padding-right: 0.5em;
-                                font-variant-numeric: tabular-nums; /* 使用等宽数字 */
+                                font-variant-numeric: tabular-nums;
                             }
                         </style>
 
 <hr style="margin:0px 0px 0px 0px" width="960pt"/>
 
                          <h2 >论文奖项</h2>
-                         <p style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; ">
+                         <!-- <p style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; ">
                              1.Best Paper in Automation Award, IEEE International Conference on Automation and Logistics, 2007<br>
                              2.Finalist for Best Paper Award, IEEE Annual International Conference on CYBER Technology in Automation, Control, and Intelligent Systems, 2018<br>
                              3.Finalist for Best Paper Award, IEEE International Conference on Real-time Computing and Robotics, 2018<br>
                              4.最佳论文展示奖, 中国光谷人工智能大会, 2019<br>
                              5.自动化学报优秀审稿专家, 2020<br>
-                             6.全国集群智能与协同控制大会最佳海报论文奖<br>
+                             6.全国集群智能与协同控制大会最佳海报论文奖, 2023<br>
                              7.全国复杂网络会议最佳学生论文提名奖（指导导师）<br>
                              8.IEEE Transactions on Control of Network Systems杰出审稿人
-                         </p>
+                         </p> -->
+
+                        <ol class="awards-list" style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; padding-left: 0; list-style: none;">
+                            <li>Best Paper in Automation Award, IEEE International Conference on Automation and Logistics, 2007</li>
+                            <li>Finalist for Best Paper Award, IEEE Annual International Conference on CYBER Technology in Automation, Control, and Intelligent Systems, 2018</li>
+                            <li>Finalist for Best Paper Award, IEEE International Conference on Real-time Computing and Robotics, 2018</li>
+                            <li>最佳论文展示奖, 中国光谷人工智能大会, 2019</li>
+                            <li>自动化学报优秀审稿专家, 2020</li>
+                            <li>全国集群智能与协同控制大会最佳海报论文奖, 2023</li>
+                            <li>全国复杂网络会议最佳学生论文提名奖（指导导师）</li>
+                            <li>IEEE Transactions on Control of Network Systems杰出审稿人</li>
+                        </ol>
+                        <style>
+                            .awards-list {
+                                counter-reset: award-item;
+                            }
+                            
+                            .awards-list li {
+                                position: relative;
+                                padding-left: 2.5em;
+                                text-indent: -1em;
+                            }
+                            
+                            .awards-list li::before {
+                                content: counter(award-item) ".";
+                                counter-increment: award-item;
+                                display: inline-block;
+                                width: 1.5em;
+                                text-align: right;
+                                margin-left: -1.5em;
+                                padding-right: 0.5em;
+                                font-variant-numeric: tabular-nums;
+                            }
+                        </style>
 
 <hr style="margin:0px 0px 0px 0px" width="960pt"/>
 
