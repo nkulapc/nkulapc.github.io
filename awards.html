@@ -83,7 +83,7 @@
                             11.天津市技术发明二等奖，苑晶，刘晓滨
                         </p> -->
 
-                        <ol class="reversed-list" style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; padding-left: 0; counter-reset: list-counter; list-style: none;">
+                        <ol class="awards-reversed" style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; padding-left: 0; list-style: none;">
                             <li>天津市杰出青年科学基金资助，苑晶</li>
                             <li>南开大学百名青年学科带头人培养计划，苑晶</li>
                             <li>斯坦福大学/Elsivier全球前2%顶尖科学家榜单，苑晶</li>
@@ -97,24 +97,27 @@
                             <li>2024年，天津市技术发明二等奖，苑晶，刘晓滨</li>
                         </ol>
                         <style>
-                            .reversed-list {
+                            .awards-reversed {
                                 display: flex;
                                 flex-direction: column-reverse;
+                                counter-reset: award-item;
                             }
                             
-                            .reversed-list li {
-                                counter-increment: list-counter;
+                            .awards-reversed li {
                                 position: relative;
-                                padding-left: 30px;
+                                padding-left: 2.5em; /* 基于字体大小的相对单位 */
+                                text-indent: -1em; /* 悬挂缩进，确保文字对齐 */
                             }
                             
-                            .reversed-list li::before {
-                                content: counter(list-counter) ".";
-                                position: absolute;
-                                left: 0;
-                                width: 25px;
+                            .awards-reversed li::before {
+                                content: counter(award-item) ".";
+                                counter-increment: award-item;
+                                display: inline-block;
+                                width: 1.5em; /* 相对于字体大小的宽度 */
                                 text-align: right;
-                                padding-right: 5px;
+                                margin-left: -1.5em; /* 向左偏移 */
+                                padding-right: 0.5em;
+                                font-variant-numeric: tabular-nums; /* 使用等宽数字 */
                             }
                         </style>
 
