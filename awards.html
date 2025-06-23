@@ -66,12 +66,10 @@
                 <div class="mainbar" style="width: 100%;">
 
                     <div class="article">
-                        
-
-                               
+        
                         <h2>科研奖项</h2>
 
-                        <p style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; ">
+                        <!-- <p style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; ">
                             1.天津市杰出青年科学基金资助，苑晶<br>
                             2.南开大学百名青年学科带头人培养计划，苑晶<br>
                             3.斯坦福大学/Elsivier全球前2%顶尖科学家榜单，苑晶<br>
@@ -83,9 +81,42 @@
                             9.河北省三三三人才（第三层次），陈飞<br>
                             10.南开大学百名青年学科带头人，陈飞<br>
                             11.天津市技术发明二等奖，苑晶，刘晓滨
+                        </p> -->
 
- 
-                        </p>
+                        <ol class="reversed-list" style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; padding-left: 0; counter-reset: list-counter; list-style: none;">
+                            <li>天津市杰出青年科学基金资助，苑晶</li>
+                            <li>南开大学百名青年学科带头人培养计划，苑晶</li>
+                            <li>斯坦福大学/Elsivier全球前2%顶尖科学家榜单，苑晶</li>
+                            <li>2021年，国家电网科技进步一等奖，苑晶</li>
+                            <li>斯坦福大学/Elsivier全球前2%顶尖科学家榜单，陈飞</li>
+                            <li>河北省自然科学奖一等奖（排名第二），陈飞</li>
+                            <li>河北省自然科学基金杰出青年项目，陈飞</li>
+                            <li>福建省高等学校新世纪优秀人才支持计划，陈飞</li>
+                            <li>河北省三三三人才（第三层次），陈飞</li>
+                            <li>南开大学百名青年学科带头人，陈飞</li>
+                            <li>2024年，天津市技术发明二等奖，苑晶，刘晓滨</li>
+                        </ol>
+                        <style>
+                            .reversed-list {
+                                display: flex;
+                                flex-direction: column-reverse;
+                            }
+                            
+                            .reversed-list li {
+                                counter-increment: list-counter;
+                                position: relative;
+                                padding-left: 30px;
+                            }
+                            
+                            .reversed-list li::before {
+                                content: counter(list-counter) ".";
+                                position: absolute;
+                                left: 0;
+                                width: 25px;
+                                text-align: right;
+                                padding-right: 5px;
+                            }
+                        </style>
 
 <hr style="margin:0px 0px 0px 0px" width="960pt"/>
 
