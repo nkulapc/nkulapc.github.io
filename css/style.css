@@ -642,7 +642,7 @@ table.submissions th p, table.submissions td p {
 
 .image-container img {
     width: 70px;
-    height: 100px;
+    height: 150px;
     object-fit: cover;
 }
 
