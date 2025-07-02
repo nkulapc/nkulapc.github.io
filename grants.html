@@ -71,10 +71,8 @@
 
                 <div class="article">
 
-
-
                     <h2>主持科研项目</h2>
-                    <ol style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; ">
+                    <ol class="research-project" style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; padding-left: 0; list-style: none;">
                         <li> 国家自然科学基金面上项目，以物体为中心的机器人单目视觉环境覆盖与建图，2025.01-2028.12。 </li>
                         <li> 国家自然科学基金青年项目，面向真实场景中增量数据的行人重识别方法研究，2025.01-2027.12。</li>
                         <li> 国家自然科学基金区域创新发展联合基金重点项目，可视度受限环境下跨光谱多传感信息融合的机器人语义感知与交互协作，2022.01-2025.12。 </li>
@@ -84,10 +82,10 @@
                         <li> 国家自然科学基金青年基金项目，未知环境下基于多传感信息融合的多机器人协作主动探索与建图，2009.01-2011.12。</li>
                         <li> 国家资助博士后研究人员计划（C档），复杂场景下的机器人增量式视觉语义感知方法研究，2024.09-2026.08。</li>
                         <li> 天津市杰出青年科学基金项目，2020.10-2024.09。</li>
-                        <li> 天津市自然科学基金面上项目，视觉-惯导融合的无人机运动目标识别与跟踪，2020.04-2023.03。</li>
-                        <li> 天津市自然科学基金面上项目，室内环境下基于Wi-Fi无线信号场的移动机器人定位与导航，2015.04-2018.03。</li>
-                        <li> 天津市自然科学基金面上项目，基于多传感信息融合的移动机器人运动目标识别与跟踪，2010.04-2013.03。</li>
+                        <li> 天津市自然科学基金面上项目，视觉-惯导融合的无人机运动目标识别与跟踪，2020.04-2023.03。</li>  
                         <li> 教育部高等学校博士学科点专项科研基金新教师基金项目，基于移动机器人主动探索的未知环境的地图创建，2009.01-2011.12。</li>
+                        <li> 天津市自然科学基金面上项目，基于多传感信息融合的移动机器人运动目标识别与跟踪，2010.04-2013.03。</li>
+                        <li> 天津市自然科学基金面上项目，室内环境下基于Wi-Fi无线信号场的移动机器人定位与导航，2015.04-2018.03。</li>
                         <li> 中国民航信息技术科研基地开放基金项目，面向机场智能服务的移动机器人环境建图与导航，2015.09-2017.08。</li>
                         <li> 国家自然科学基金重大研究计划培育项目，面向高柔性、高动态、高不确定性制造场景的分布式弹性控制与优化决策。</li>
                         <li> 国家自然科学基金面上项目，含超参数的多智能体系统的分布式协同优化。</li>
@@ -107,32 +105,73 @@
                         <li> GF项目，××××××××控制，2023.11-2025.11。</li>
                         <li> GF项目，多视角×××××××，2022.01-2023.12。</li>
                         <li> GF项目，××××××××构建，2020.01-2021.06。</li>
-                        </li>
-
                     </ol>
+                    <style>
+                        .research-project {
+                            display: flex;
+                            /* flex-direction: column-reverse; */
+                            counter-reset: project-item;
+                        }
+                            
+                        .research-project li {
+                            position: relative;
+                            padding-left: 2.5em;
+                            text-indent: -1em;
+                        }
+                        
+                        .research-project li::before {
+                            content: counter(project-item) ".";
+                            counter-increment: project-item;                                
+                            display: inline-block;
+                            width: 1.5em;
+                            text-align: right;
+                            margin-left: -1.5em;
+                            padding-right: 0.5em;
+                            font-variant-numeric: tabular-nums;
+                        }
+                    </style>
                     <!-- <p  style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; ">
                             
                         </p> -->
 
-
-
-
                     <hr style="margin:0px 0px 0px 0px" width="960pt" />
 
                     <h2>参与科研项目</h2>
-                    <ol style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; ">
-                        <li> 国家高技术研究发展计划(863计划)重点项目，机器人模块化技术——家用服务机器人网络化及环境识别技术研究，2012.01-2014.12。</li>
-                        <li> 国家重点研发计划课题，术前手术规划与术中主动导航系统，2019.06-2022.05。</li>
+                    <ol class="research-project-part" style="margin: -5pt 0pt 0pt 0pt; line-height: 1.5; padding-left: 0; list-style: none;">
                         <li> 国家高技术研究发展计划(863计划)项目，未知环境下移动机器人主动探索与建图，2006.12-2008.12。</li>
-                        <li> 国家自然科学基金面上项目，基于主动学习的移动机器人室内场景理解与统一建图，2019.01-2022.12。</li>
-                        <li> 国家自然科学基金面上项目，野外环境中基于自适应学习的移动机器人地形分类与建图，2012.01-2015.12。</li>
                         <li> 国家自然科学基金青年基金项目，未知环境下基于陆标动态配置的移动机器人主动同时定位与地图创建，2007.01-2009.12。</li>
-                        <li> 山东省自然科学基金重大基础研究项目，面向康养服务机器人的人-机-环境共融基础理论与关键技术，2019.12-2024.12，课题负责人。</li>
+                        <li> 国家高技术研究发展计划(863计划)重点项目，机器人模块化技术——家用服务机器人网络化及环境识别技术研究，2012.01-2014.12。</li>
+                        <li> 国家自然科学基金面上项目，野外环境中基于自适应学习的移动机器人地形分类与建图，2012.01-2015.12。</li>
                         <li> 国家自然科学基金面上项目，基于紧凑图像特征与混合索引的海量图像检索技术研究，2016.01-2019.12，67万。</li>
                         <li> 科技部国家重点研发计划政府间合作重点专项，面向智慧城市的地空一体化视频内容分析与挖掘，2018.01.01-2020.12.31, 167万。</li>
-
+                        <li> 国家重点研发计划课题，术前手术规划与术中主动导航系统，2019.06-2022.05。</li>
+                        <li> 国家自然科学基金面上项目，基于主动学习的移动机器人室内场景理解与统一建图，2019.01-2022.12。</li>
+                        <li> 山东省自然科学基金重大基础研究项目，面向康养服务机器人的人-机-环境共融基础理论与关键技术，2019.12-2024.12，课题负责人。</li>
                     </ol>
-
+                    <style>
+                        .research-project-part {
+                            display: flex;
+                            flex-direction: column-reverse;
+                            counter-reset: project-part-item;
+                        }
+                            
+                        .research-project-part li {
+                            position: relative;
+                            padding-left: 2.5em;
+                            text-indent: -1em;
+                        }
+                        
+                        .research-project-part li::before {
+                            content: counter(project-part-item) ".";
+                            counter-increment: project-part-item;                                
+                            display: inline-block;
+                            width: 1.5em;
+                            text-align: right;
+                            margin-left: -1.5em;
+                            padding-right: 0.5em;
+                            font-variant-numeric: tabular-nums;
+                        }
+                    </style>
 
                     <hr style="margin:0px 0px 0px 0px" width="960pt" />
 
@@ -142,13 +181,6 @@
 
             <div class="clr"></div>
         </div>
-
-
-
-
-
-
-
 
     </div>
     <footer style="background: #800080;
