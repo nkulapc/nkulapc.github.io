@@ -64,16 +64,315 @@
 
     </ul>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教师课程展示优化</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            border-radius: 2px;
+            margin: 10px auto 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        /* 教师名片样式 */
+        .teacher-card {
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eaeaea;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .teacher-card:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .teacher-card:hover {
+            background-color: #f8f9ff;
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
+            transform: translateY(-3px);
+        }
+        
+        /* 教师名称样式 - 标题与教师间距减小 */
+        .teacher-name {
+            display: flex;
+            align-items: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 26px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        
+        .teacher-name::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            border-radius: 3px;
+        }
+        
+        .teacher-name i {
+            margin-right: 15px;
+            color: #3498db;
+            font-size: 24px;
+        }
+        
+        /* 课程样式 - 教师与课程间距减小 */
+        .courses {
+            padding-top: 10px;
+        }
+        
+        .course-item {
+            position: relative;
+            padding: 8px 15px 8px 35px;
+            margin-bottom: 8px;
+            border-left: 3px solid #3498db;
+            background-color: #f8f9ff;
+            border-radius: 0 6px 6px 0;
+            transition: all 0.2s ease;
+            font-size: 17px;
+        }
+        
+        .course-item:hover {
+            border-left-width: 5px;
+            background-color: #edf7ff;
+        }
+        
+        .course-item::before {
+            content: '\f518';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 13px;
+            top: 10px;
+            color: #3498db;
+            font-size: 14px;
+        }
+        
+        .en-course {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+        
+        .course-type {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-left: 15px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background-color: #e0e7ff;
+        }
+        
+        .zh-course {
+            color: #2c3e50;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        /* 不同教师之间间距增大 */
+        .teacher-section {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .teacher-section:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(to right, rgba(52, 152, 219, 0.2), rgba(44, 62, 80, 0.2), rgba(52, 152, 219, 0.2));
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .teacher-name {
+                font-size: 22px;
+            }
+            
+            .course-item {
+                padding-left: 30px;
+                font-size: 16px;
+            }
+            
+            .teacher-section {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 教师1 -->
+        <div class="teacher-section">
+            <div class="teacher-card">
+                <h2 class="teacher-name">
+                    <i class="fas fa-chalkboard-teacher"></i>苑晶 教授
+                </h2>
+                <div class="courses">
+                    <div class="course-item">
+                        <span class="zh-course">《系统建模与辨识》</span>
+                        <span class="course-type">研究生课程</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="zh-course">《现代控制论》</span>
+                        <span class="course-type">本科生课程</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="zh-course">《计算机控制系统与技术》</span>
+                        <span class="course-type">本科生课程</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="zh-course">《自动化与智能科学概论》</span>
+                        <span class="course-type">本科生课程</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 教师2 -->
+        <div class="teacher-section">
+            <div class="teacher-card">
+                <h2 class="teacher-name">
+                    <i class="fas fa-chalkboard-teacher"></i>陈飞 教授
+                </h2>
+                <div class="courses">
+                    <div class="course-item">
+                        <span class="en-course">《Stability of Control Systems and Robust Control》</span>
+                        <span class="course-type">研究生课程（全英文）</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="en-course">《Distributed Control of Multi-Agent Systems》</span>
+                        <span class="course-type">研究生课程（双语）</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="zh-course">《现代优化计算方法》</span>
+                        <span class="course-type">研究生课程</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="zh-course">《微分方程与复变函数》</span>
+                        <span class="course-type">本科生课程</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="en-course">《Nonlinear Systems》</span>
+                        <span class="course-type">本科生课程（全英文）</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="zh-course">《智能优化算法及其应用》</span>
+                        <span class="course-type">本科生课程</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="zh-course">《新生研讨课》</span>
+                        <span class="course-type">本科生课程</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 教师3 -->
+        <div class="teacher-section">
+            <div class="teacher-card">
+                <h2 class="teacher-name">
+                    <i class="fas fa-chalkboard-teacher"></i>刘晓滨 博士后
+                </h2>
+                <div class="courses">
+                    <div class="course-item">
+                        <span class="zh-course">《深度学习编程实践》</span>
+                        <span class="course-type">专业选修课</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
-<div class="content">
+<!-- <div class="content">
     <div class="mainbar" style="width: 100%;">
 
         <div class="article">
 
-
-
     <h2>苑晶 教授</h2>
-
     <p style="margin: 10pt 0pt 0pt 0pt; line-height: 2.5; font: 20pt;">
         《系统建模与辨识》 研究生课程
         <br>
@@ -82,53 +381,34 @@
         《计算机控制系统与技术》 本科生课程
         <br>
         《自动化与智能科学概论》 本科生课程
-
-
     </p>
 
 
-     <h2 >陈飞 教授</h2>
-     <p style="margin: 10pt 0pt 0pt 0pt; line-height: 2.5; font: 20pt;">
+    <h2 >陈飞 教授</h2>
+    <p style="margin: 10pt 0pt 0pt 0pt; line-height: 2.5; font: 20pt;">
         《Stability of Control Systems and Robust Control》（全英文授课） 研究生课程
         <br>
-         《Distributed Control of Multi-Agent Systems》（双语） 研究生课程
-         <br>
+        《Distributed Control of Multi-Agent Systems》（双语） 研究生课程
+        <br>
         《现代优化计算方法》 研究生课程
-         <br>
-         《微分方程与复变函数》 本科生课程
-         <br>
-         《Nonlinear Systems》（全英文授课） 本科生课程
-         <br>
-         《智能优化算法及其应用》 本科生课程
-         <br>
-         《新生研讨课》
-     </p>
+        <br>
+        《微分方程与复变函数》 本科生课程
+        <br>
+        《Nonlinear Systems》（全英文授课） 本科生课程
+        <br>
+        《智能优化算法及其应用》 本科生课程
+        <br>
+        《新生研讨课》
+    </p>
 
-
-
-     <h2 >刘晓滨 博士后</h2>
-     <p style="margin: 10pt 0pt 0pt 0pt; line-height: 2.5; font: 20pt;">
+    <h2 >刘晓滨 博士后</h2>
+    <p style="margin: 10pt 0pt 0pt 0pt; line-height: 2.5; font: 20pt;">
         《深度学习编程实践》
-
-
         </p>
-
-
-
-
-
                     </div>
-
-
-
                 </div>
-
-
-
             </div>
-
-
-        </div>
+        </div> -->
 
     <footer style="background: #800080;
     text-align: center;
