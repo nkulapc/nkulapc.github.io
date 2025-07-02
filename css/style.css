@@ -649,10 +649,17 @@ table.submissions th p, table.submissions td p {
 .image-container .student-photo {
     text-align: center;
     overflow: hidden;
+    width: 100px;
+    box-sizing: border-box;
 }
 
 .image-container .student-name {
-
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .image-container .graduation-info {
@@ -661,6 +668,12 @@ table.submissions th p, table.submissions td p {
     margin-top: 5px;
     text-align: center;
     font-style: italic;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    width: 100%;
 }
 
 /* PAPER & PATENT LIST */
