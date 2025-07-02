@@ -649,7 +649,7 @@ table.submissions th p, table.submissions td p {
 .image-container .student-photo {
     text-align: center;
     overflow: hidden;
-    width: 100px;
+    width: 150px;
     box-sizing: border-box;
 }
 
