@@ -644,15 +644,29 @@ table.submissions th p, table.submissions td p {
     width: 70px;
     height: 100px;
     object-fit: cover;
+    display: block; 
+    margin: 0 auto; 
 }
 
 .image-container .student-photo {
     text-align: center;
     overflow: hidden;
+    min-width: 90px; 
+    max-width: 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-container .student-name {
-
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 
 .image-container .graduation-info {
@@ -661,6 +675,12 @@ table.submissions th p, table.submissions td p {
     margin-top: 5px;
     text-align: center;
     font-style: italic;
+    min-height: 32px; /* 确保高度一致 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    width: 100%;
 }
 
 /* PAPER & PATENT LIST */
