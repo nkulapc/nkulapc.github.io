@@ -642,15 +642,21 @@ table.submissions th p, table.submissions td p {
 
 .image-container img {
     width: 70px;
-    height: 150px;
+    height: 100px;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 .image-container .student-photo {
     text-align: center;
-    overflow: hidden;
-    width: 150px;
+    overflow: visible; 
+    min-width: 90px; 
+    max-width: 100px; 
     box-sizing: border-box;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-container .student-name {
@@ -660,6 +666,7 @@ table.submissions th p, table.submissions td p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 100%;
 }
 
 .image-container .graduation-info {
@@ -668,7 +675,7 @@ table.submissions th p, table.submissions td p {
     margin-top: 5px;
     text-align: center;
     font-style: italic;
-    min-height: 30px;
+    min-height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
