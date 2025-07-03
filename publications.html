@@ -509,6 +509,8 @@
                             .paper-list {
                                 list-style-type: none;
                                 padding: 0;
+                                counter-reset: paper-counter -1;
+                                transform: rotateX(180deg);
                             }
                             
                             .paper-item {
@@ -520,6 +522,8 @@
                                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
                                 transition: all 0.2s ease;
                                 font-size: 14px;
+                                counter-increment: paper-counter;
+                                transform: rotateX(180deg);
                             }
                             
                             .paper-item:hover {
@@ -598,7 +602,6 @@
                                 text-decoration: underline;
                             }
                             
-                            /* 响应式设计 */
                             @media (max-width: 768px) {
                                 .paper-item {
                                     padding-left: 35px;
