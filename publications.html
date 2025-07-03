@@ -619,20 +619,6 @@
                                 }
                             }
                         </style>
-                        <!-- <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                                const paperList = document.getElementById('paperList');
-                                const items = Array.from(paperList.querySelectorAll('.paper-item'));
-                                items.reverse().forEach(item => paperList.appendChild(item));
-                                const reversedItems = paperList.querySelectorAll('.paper-item');
-                                reversedItems.forEach((item, index) => {
-                                    const indexSpan = document.createElement('span');
-                                    indexSpan.className = 'paper-index';
-                                    indexSpan.textContent = `[${reversedItems.length - index}]`;
-                                    item.insertBefore(indexSpan, item.firstChild);
-                                });
-                            });
-                        </script> -->
 
                         <hr style="margin:0px 0px 0px 0px" width="960pt"/>
                         <h2>专利</h2>
@@ -689,12 +675,14 @@
                             <li>苑晶, 周光召, 孙沁璇, 基于线段阴影的深度相机视觉里程测量方法, 发明专利, 2023。</li>
                             <li>苑晶, 俞诗卓, 公岩松, 张雪波, 激光点云2D-3D双模态交互增强不规则电线检测方法, 发明专利, 2024。</li>
                             <li>苑晶, 唐光盛, 张雪波, 王扬, 一种自适应的视觉惯导里程计输出方法, 发明专利, 2024。</li>
+                            <li></li>
                         </ol>
                         <style>
                             .patent-reversed {
                                 display: flex;
                                 flex-direction: column-reverse;
                                 counter-reset: patent-item;
+                                padding-bottom: 10px;
                             }
                             
                             .patent-reversed li {
