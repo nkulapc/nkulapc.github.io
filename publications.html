@@ -509,7 +509,6 @@
                             .paper-list {
                                 list-style-type: none;
                                 padding: 0;
-                                counter-reset: paper-counter 0;
                             }
                             
                             .paper-item {
@@ -528,9 +527,19 @@
                                 box-shadow: 0 3px 8px rgba(128, 0, 128, 0.1);
                             }
                             
-                            .paper-item::before {
+                            /* .paper-item::before {
                                 content: '[' counter(paper-counter) ']';
                                 counter-increment: paper-counter;
+                                position: absolute;
+                                left: 10px;
+                                top: 8px;
+                                font-weight: bold;
+                                color: #800080;
+                                font-size: 14px;
+                                font-variant-numeric: tabular-nums;
+                            } */
+
+                            .paper-index {
                                 position: absolute;
                                 left: 10px;
                                 top: 8px;
@@ -596,15 +605,15 @@
                                     font-size: 13px;
                                 }
                                 
-                                .paper-item::before {
+                                /* .paper-item::before {
                                     font-size: 13px;
                                     left: 8px;
-                                }
+                                } */
                                 
                                 .paper-year {
                                     position: static;
                                     display: inline-block;
-                                    margin-bottom: 5px;
+                                    margin: 5px 0;
                                 }
                             }
                         </style>
