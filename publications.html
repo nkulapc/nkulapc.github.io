@@ -509,7 +509,7 @@
                             .paper-list {
                                 list-style-type: none;
                                 padding: 0;
-                                counter-reset: paper-counter -1;
+                                counter-reset: paper-counter;
                                 transform: rotateX(180deg);
                             }
                             
@@ -533,7 +533,6 @@
                             
                             .paper-item::before {
                                 content: '[' counter(paper-counter) ']';
-                                counter-increment: paper-counter;
                                 position: absolute;
                                 left: 10px;
                                 top: 8px;
