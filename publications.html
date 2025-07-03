@@ -591,10 +591,6 @@
                             
                             /* 响应式设计 */
                             @media (max-width: 768px) {
-                                body {
-                                    padding: 15px;
-                                }
-                                
                                 .paper-item {
                                     padding-left: 35px;
                                     font-size: 13px;
@@ -614,9 +610,16 @@
                         </style>
                         <script>
                             document.addEventListener('DOMContentLoaded', function() {
-                                const list = document.querySelector('.paper-list');
-                                const items = Array.from(list.querySelectorAll('.paper-item'));
-                                items.reverse().forEach(item => list.appendChild(item));
+                                const paperList = document.getElementById('paperList');
+                                const items = Array.from(paperList.querySelectorAll('.paper-item'));
+                                items.reverse().forEach(item => paperList.appendChild(item));
+                                const reversedItems = paperList.querySelectorAll('.paper-item');
+                                reversedItems.forEach((item, index) => {
+                                    const indexSpan = document.createElement('span');
+                                    indexSpan.className = 'paper-index';
+                                    indexSpan.textContent = `[${reversedItems.length - index}]`;
+                                    item.insertBefore(indexSpan, item.firstChild);
+                                });
                             });
                         </script>
 
