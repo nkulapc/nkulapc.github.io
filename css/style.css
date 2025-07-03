@@ -666,7 +666,7 @@ table.submissions th p, table.submissions td p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: -3px;
+    margin-bottom: -2px;
     width: 100%;
 }
 
