@@ -530,7 +530,7 @@
                             
                             .paper-item::before {
                                 content: '[' counter(paper-counter) ']';
-                                counter-increment: paper-counter -1;
+                                counter-increment: paper-counter;
                                 position: absolute;
                                 left: 10px;
                                 top: 8px;
@@ -612,6 +612,13 @@
                                 }
                             }
                         </style>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const list = document.querySelector('.paper-list');
+                                const items = Array.from(list.querySelectorAll('.paper-item'));
+                                items.reverse().forEach(item => list.appendChild(item));
+                            });
+                        </script>
 
                         <hr style="margin:0px 0px 0px 0px" width="960pt"/>
                         <h2>专利</h2>
