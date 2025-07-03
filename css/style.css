@@ -672,7 +672,7 @@ table.submissions th p, table.submissions td p {
 .image-container .graduation-info {
     font-size: 10px;
     color: #666;
-    margin-top: 0px;
+    margin-top: -2px;
     text-align: center;
     font-style: italic;
     min-height: 32px;
