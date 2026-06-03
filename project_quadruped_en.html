@@ -13,14 +13,14 @@
     <style>
         /* Article styles scoped to #proj-article so the rest of the site is unaffected */
         #proj-article {
-            font-size: 14px;
+            font-size: 16px;
             color: #4e4e4e;
             padding-bottom: 160px;
         }
         #proj-article .proj-title {
             text-align: center;
             color: #800080;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
             line-height: 1.35;
             margin: 6px 0 4px;
@@ -28,7 +28,7 @@
         #proj-article .proj-subtitle {
             text-align: center;
             color: #888;
-            font-size: 14px;
+            font-size: 15px;
             margin: 0 0 14px;
         }
         #proj-article .proj-rule {
@@ -41,17 +41,17 @@
         #proj-article .proj-summary {
             background: #f6eef6;
             border-left: 4px solid #800080;
-            padding: 16px 22px;
+            padding: 18px 24px;
             border-radius: 4px;
             margin: 0 0 30px;
-            line-height: 1.85;
+            line-height: 1.9;
             text-align: justify;
-            font-size: 14px;
+            font-size: 16px;
             color: #4e4e4e;
         }
         #proj-article h2 {
             color: #3f3f3f;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
             padding: 16px 0 8px;
             margin-top: 14px;
@@ -62,18 +62,19 @@
             margin-right: 6px;
         }
         #proj-article p {
-            line-height: 1.85;
+            line-height: 1.9;
             text-align: justify;
-            margin: 10px 0;
+            margin: 12px 0;
             padding: 0;
-            font-size: 14px;
+            font-size: 16px;
         }
         #proj-article figure {
             margin: 28px auto;
             text-align: center;
         }
         #proj-article figure img {
-            max-width: 100%;
+            max-width: 700px;
+            width: auto;
             height: auto;
             border: 1px solid #ddd;
             border-radius: 6px;
@@ -83,15 +84,15 @@
         }
         #proj-article figcaption {
             margin-top: 10px;
-            font-size: 13px;
+            font-size: 14px;
             color: #777;
         }
         #proj-article .proj-table {
-            width: 85%;
+            width: 80%;
             margin: 22px auto;
             border-collapse: collapse;
             border: 1px solid #ccc;
-            font-size: 14px;
+            font-size: 15px;
         }
         #proj-article .proj-table th,
         #proj-article .proj-table td {
@@ -114,7 +115,7 @@
         #proj-article .back-link {
             display: inline-block;
             margin-top: 18px;
-            font-size: 14px;
+            font-size: 15px;
             color: #315d7f;
             font-weight: bold;
         }
@@ -163,31 +164,31 @@
             <hr class="proj-rule" />
 
             <div class="proj-summary">
-                This project places strong emphasis on the public dissemination and academic sharing of its research outcomes, comprehensively presenting the technical breakthroughs achieved by the team in tackling demanding, low-visibility industrial environments. Targeting the needs of autonomous navigation and semantic perception for robots in complex, unstructured settings, the project builds a quadruped-robot-based cross-spectral integrated experimental platform that fuses multiple sensors including thermal imaging, visible light, an inertial measurement unit (IMU), and LiDAR. Building on this platform, the team collected and constructed a cross-modal dataset in real thermal-power-plant scenarios, covering a wide range of extreme degradation challenges and richly annotated with semantic labels. Field validation vividly demonstrates that, under extreme conditions such as low light, strong reflections, and motion blur, the system overcomes the robustness bottleneck, achieving an extremely low long-range drift rate together with high-accuracy object recognition, thereby effectively safeguarding the robot's autonomous inspection.
+                This project shares the group's research outcomes and presents the technical advances achieved in addressing demanding, low-visibility industrial environments. To meet the needs of autonomous navigation and semantic perception for robots in complex, unstructured environments, we built a quadruped-robot cross-spectral perception platform that integrates several sensors, including a thermal-infrared camera, a visible-light camera, an inertial measurement unit (IMU), and a LiDAR. On this platform, we collected a cross-modal dataset with rich semantic annotations in a real thermal-power-plant setting, covering a range of extreme degradation conditions. Field validation shows that, under extreme conditions such as low illumination, strong reflections, and motion blur, the system overcomes the robustness bottleneck of conventional methods and achieves a very low long-range drift rate together with high object-recognition accuracy, providing reliable support for autonomous inspection.
             </div>
 
             <h2><span class="num">1.</span>Platform Construction</h2>
-            <p>The experimental platform uses the Unitree AlienGo quadruped robot as its mobile carrier, which offers excellent locomotion control and can adapt to complex unstructured terrain such as uneven ground. For the perception system, the project independently designed and built a compact, fully integrated "cross-spectral perception module." This module comprises: an Optris Pi640 uncooled infrared thermal camera for capturing all-weather thermal-radiation information; the visible-light module of an Intel RealSense D435i depth camera for acquiring texture and semantic information; an Xsens MTi-100 high-precision industrial-grade IMU for providing high-frequency motion priors; and a Velodyne VLP-16 LiDAR mounted on top of the platform for obtaining accurate environmental depth. All data are processed centrally and in real time by an onboard Intel NUC mini-computer.</p>
-            <p>Because thermal and visible-light imaging rely on fundamentally different mechanisms—causing conventional calibration to fail—the project fabricated a customized calibration board with circular hollow holes and an electric heating pad attached to its back. Once powered, it forms a clear "bright–dark" contrast pattern, enabling the joint extrinsic calibration of the cross-spectral multi-sensor suite to be completed successfully via a cascaded strategy.</p>
+            <p>The platform uses the Unitree AlienGo quadruped robot as its mobile base; with strong locomotion control, it adapts to complex unstructured terrain such as uneven ground. For perception, we designed and built a compact, fully integrated cross-spectral perception module that contains the following sensors: an Optris Pi640 uncooled thermal-infrared camera for capturing all-weather thermal-radiation information; the visible-light module of an Intel RealSense D435i depth camera for acquiring texture and semantic information; an Xsens MTi-100 high-precision industrial-grade IMU for providing high-frequency motion priors; and a Velodyne VLP-16 LiDAR mounted on top of the platform for obtaining accurate environmental depth. All sensor data are processed centrally and in real time by an onboard Intel NUC mini-computer.</p>
+            <p>Because thermal and visible-light imaging rely on fundamentally different mechanisms, conventional calibration becomes ineffective. We therefore fabricated a custom calibration board with circular through-holes and an electric heating pad attached to its back. When the board is powered, it forms a clear bright-and-dark contrast pattern, allowing the joint extrinsic calibration of the cross-spectral multi-sensor suite to be completed with a cascaded strategy.</p>
 
             <figure>
-                <img src="images/project/inspect_platform.png" alt="Construction of the cross-spectral perception and navigation platform">
-                <figcaption>Fig. 1&nbsp;&nbsp;Construction of the robot-dog cross-spectral perception and navigation platform</figcaption>
+                <img src="images/project/inspect_platform.png" alt="Construction of the quadruped-robot cross-spectral perception and navigation platform">
+                <figcaption>Fig. 1.&nbsp;&nbsp;Construction of the quadruped-robot cross-spectral perception and navigation platform.</figcaption>
             </figure>
 
             <h2><span class="num">2.</span>Dataset Construction</h2>
-            <p>Existing mainstream datasets lack dedicated data for low-visibility, high-risk industrial environments. The project selected the Chentang Thermal Power Plant in Tianjin—covering a total area of 20,000 square meters—as the data-collection site, encompassing diverse scenes ranging from narrow pipe rooms to open outdoor plant areas. This industrial setting is not only densely packed with metal pipes that make feature extraction difficult, but also exhibits extremely dynamic lighting conditions and rich thermal-source radiation characteristics.</p>
-            <p>The resulting dataset fully covers a typical operating cycle of robotic inspection, with particular emphasis on a variety of highly challenging conditions, including: dim regions where visible light struggles to extract effective feature points, motion blur caused by body shaking, large-area overexposure caused by direct searchlight illumination, as well as reduced thermal-image contrast caused by similar temperatures and LiDAR geometric degradation induced by corridor environments. In addition, the team performed detailed semantic annotation on key frames, labeling critical equipment such as valves, gauges, and pipes, so that the dataset can directly serve industrial semantic-segmentation and object-detection tasks.</p>
+            <p>Existing mainstream datasets lack dedicated data for low-visibility, high-risk industrial environments. We selected the Chentang Thermal Power Plant in Tianjin, with a total area of about 20,000 m&sup2;, as the data-collection site, covering scenes that range from narrow pipe rooms to open outdoor plant areas. The site is densely filled with metal pipes that make feature extraction difficult, exhibits an extremely dynamic range of illumination, and contains abundant thermal-radiation sources.</p>
+            <p>The collected dataset covers a typical operating cycle of robotic inspection and focuses on several challenging conditions, including low-light regions where the visible camera can hardly extract effective feature points, motion blur caused by body shaking, large-area overexposure caused by direct searchlight illumination, reduced thermal-image contrast caused by similar temperatures, and LiDAR geometric degeneracy induced by corridor environments. In addition, we carefully annotated key frames at the semantic level, labeling critical equipment such as valves, gauges, and pipes, so that the dataset can directly serve industrial semantic-segmentation and object-detection tasks.</p>
 
             <h2><span class="num">3.</span>Experimental Results</h2>
-            <p>To comprehensively evaluate the system's robustness, the team conducted field comparison experiments along the inspection route at the thermal power plant. In the qualitative analysis, when entering a dim equipment room with reflective interference, visible-light features dropped sharply, and the project's cross-spectral fusion system automatically increased the weight of the thermal modality—which captured stable "thermal features"—successfully maintaining localization continuity. During severe body shaking, the pre-integration constraints of the high-frequency IMU together with the high-contrast thermal data jointly ensured the stability of front-end tracking. In an empty corridor, visual texture information and the IMU effectively constrained the axial drift of the LiDAR.</p>
+            <p>To comprehensively evaluate the system's robustness, we conducted a field comparison experiment along the inspection route at the thermal power plant. In the qualitative analysis, when entering a dim equipment room with reflective interference, the visible-light features decreased sharply, and our cross-spectral fusion system automatically raised the weight of the thermal modality, which captured stable thermal features and maintained continuous localization. During severe body shaking, the pre-integration constraints of the high-frequency IMU and the high-contrast thermal data together ensured the stability of front-end tracking. In an empty corridor, the visual texture information and the IMU effectively constrained the axial drift of the LiDAR.</p>
 
             <figure>
                 <img src="images/project/inspect_mapping.png" alt="Comparison of localization and mapping results">
-                <figcaption>Fig. 2&nbsp;&nbsp;Comparison of localization and mapping results</figcaption>
+                <figcaption>Fig. 2.&nbsp;&nbsp;Comparison of localization and mapping results.</figcaption>
             </figure>
 
-            <p>In the quantitative evaluation of localization accuracy, after an inspection of several hundred meters, the schemes based on LiDAR-inertial (LI) alone or LiDAR-visible-inertial (LVI) exhibited origin drift as large as 5.3 m and 8.7 m respectively, whereas the cross-spectral fusion scheme (LVTI) proposed in this project kept the origin drift within 0.2 m, achieving a perfect loop closure.</p>
+            <p>In the quantitative evaluation of localization accuracy, after an inspection of several hundred meters, the LiDAR-inertial (LI) and LiDAR-visible-inertial (LVI) configurations exhibited origin drifts as large as 5.3 m and 8.7 m, respectively, whereas our proposed cross-spectral fusion (LVTI) limited the origin drift to within 0.2 m, achieving a near-perfect loop closure.</p>
 
             <table class="proj-table">
                 <thead>
@@ -198,33 +199,33 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>LiDAR-Inertial (LI)</td>
+                        <td>LiDAR-inertial (LI)</td>
                         <td>5.3 m</td>
                     </tr>
                     <tr>
-                        <td>LiDAR-Visible-Inertial (LVI)</td>
+                        <td>LiDAR-visible-inertial (LVI)</td>
                         <td>8.7 m</td>
                     </tr>
                     <tr>
-                        <td>Ours · Cross-spectral fusion (LVTI)</td>
+                        <td>Cross-spectral fusion (LVTI, ours)</td>
                         <td class="best">&lt; 0.2 m</td>
                     </tr>
                 </tbody>
             </table>
 
             <figure>
-                <img src="images/project/inspect_pr_curve.png" alt="Object-recognition PR curves before and after fusion">
-                <figcaption>Fig. 3&nbsp;&nbsp;Object-recognition PR curves before and after fusion</figcaption>
+                <img src="images/project/inspect_pr_curve.png" alt="Object-recognition precision-recall curves before and after fusion" style="max-width:420px;">
+                <figcaption>Fig. 3.&nbsp;&nbsp;Object-recognition precision-recall curves before and after fusion.</figcaption>
             </figure>
 
             <figure>
                 <img src="images/project/inspect_detection.png" alt="Comparison of recognition results before and after fusion">
-                <figcaption>Fig. 4&nbsp;&nbsp;Comparison of recognition results before and after fusion</figcaption>
+                <figcaption>Fig. 4.&nbsp;&nbsp;Comparison of recognition results before and after fusion.</figcaption>
             </figure>
 
-            <p>In the evaluation of recognition results, the cross-modal fusion algorithm significantly improved object-detection accuracy. Experiments show that, after fusion, the overall mean average precision (mAP50) for "pipe," "gauge," and "valve" rose from 0.854 before fusion to 0.908. The high-precision localization and recognition capabilities described above demonstrate that the system can safeguard both equipment and robot during autonomous inspection lasting several hours.</p>
+            <p>In the recognition evaluation, the cross-modal fusion algorithm markedly improved object-detection accuracy. After fusion, the overall mean average precision (mAP50) for pipes, gauges, and valves increased from 0.854 to 0.908. The high-precision localization and recognition described above ensure the safety of both the equipment and the robot during autonomous inspection lasting several hours.</p>
 
-            <a href="index_en.html" class="back-link">← Back to Home</a>
+            <a href="index_en.html" class="back-link">&larr; Back to Home</a>
 
         </div>
     </div>
@@ -240,11 +241,11 @@ position: fixed;
 bottom: 0;
 line-height: 1.5em;
 color: #FFFFFF;">
-Laboratory for Advanced Perception and Control, Nankai University. Copyright © 2024, All Rights Reserved
+Laboratory for Advanced Perception and Control, Nankai University. Copyright &copy; 2024, All Rights Reserved
 </footer>
 
 <a href="project_quadruped.html" class="language-switcher">
-中文
+&#20013;&#25991;
 </a>
 
 </body>
