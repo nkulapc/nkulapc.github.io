@@ -13,14 +13,14 @@
     <style>
         /* 项目正文样式（作用域限定在 #proj-article，避免影响全站其它页面） */
         #proj-article {
-            font-size: 14px;
+            font-size: 16px;
             color: #4e4e4e;
             padding-bottom: 160px; /* 为固定页脚与语言切换按钮留出空间 */
         }
         #proj-article .proj-title {
             text-align: center;
             color: #800080;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: bold;
             line-height: 1.35;
             margin: 6px 0 4px;
@@ -28,7 +28,7 @@
         #proj-article .proj-subtitle {
             text-align: center;
             color: #888;
-            font-size: 14px;
+            font-size: 15px;
             margin: 0 0 14px;
         }
         #proj-article .proj-rule {
@@ -41,18 +41,18 @@
         #proj-article .proj-summary {
             background: #f6eef6;
             border-left: 4px solid #800080;
-            padding: 16px 22px;
+            padding: 18px 24px;
             border-radius: 4px;
             margin: 0 0 30px;
-            line-height: 1.85;
+            line-height: 1.9;
             text-indent: 2em;
             text-align: justify;
-            font-size: 14px;
+            font-size: 16px;
             color: #4e4e4e;
         }
         #proj-article h2 {
             color: #3f3f3f;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
             padding: 16px 0 8px;
             margin-top: 14px;
@@ -64,18 +64,19 @@
         }
         #proj-article p {
             text-indent: 2em;
-            line-height: 1.85;
+            line-height: 1.9;
             text-align: justify;
-            margin: 10px 0;
+            margin: 12px 0;
             padding: 0;
-            font-size: 14px;
+            font-size: 16px;
         }
         #proj-article figure {
             margin: 28px auto;
             text-align: center;
         }
         #proj-article figure img {
-            max-width: 100%;
+            max-width: 700px;
+            width: auto;
             height: auto;
             border: 1px solid #ddd;
             border-radius: 6px;
@@ -85,7 +86,7 @@
         }
         #proj-article figcaption {
             margin-top: 10px;
-            font-size: 13px;
+            font-size: 14px;
             color: #777;
         }
         #proj-article .proj-table {
@@ -93,7 +94,7 @@
             margin: 22px auto;
             border-collapse: collapse;
             border: 1px solid #ccc;
-            font-size: 14px;
+            font-size: 15px;
         }
         #proj-article .proj-table th,
         #proj-article .proj-table td {
@@ -116,7 +117,7 @@
         #proj-article .back-link {
             display: inline-block;
             margin-top: 18px;
-            font-size: 14px;
+            font-size: 15px;
             color: #315d7f;
             font-weight: bold;
         }
@@ -173,8 +174,8 @@
             <p>由于热成像与可见光成像机理截然不同，导致传统标定失效，本项目制作了一块带有圆形镂空孔洞并在背面贴附电加热垫的定制化标定板。通电后形成清晰的“亮-暗”对比图案，从而采用级联策略成功完成了跨光谱多传感器的联合外参标定。</p>
 
             <figure>
-                <img src="images/project/inspect_platform.png" alt="机器狗跨光谱感知与导航实验平台构建">
-                <figcaption>图 4.1&nbsp;&nbsp;机器狗跨光谱感知与导航实验平台构建</figcaption>
+                <img src="images/inspect_platform.png" alt="机器狗跨光谱感知与导航实验平台构建">
+                <figcaption>图 1&nbsp;&nbsp;机器狗跨光谱感知与导航实验平台构建</figcaption>
             </figure>
 
             <h2><span class="num">二、</span>数据集构建</h2>
@@ -185,8 +186,8 @@
             <p>为全面评估系统的鲁棒性，项目组在热电厂开展了巡检路线的实地对比实验。在定性分析中，当进入昏暗且有反光干扰的设备间时，可见光特征锐减，本项目的跨光谱融合系统自动提升了捕捉到稳定“热特征”的热成像模态权重，成功维持了定位连续性。在机身剧烈抖动时，高频 IMU 的预积分约束与对比度高的热成像数据共同保证了前端追踪的稳定性。在空荡走廊中，视觉纹理信息和 IMU 有效约束了激光雷达的轴向漂移。</p>
 
             <figure>
-                <img src="images/project/inspect_mapping.png" alt="定位建图结果对比">
-                <figcaption>图 4.4&nbsp;&nbsp;定位建图结果对比</figcaption>
+                <img src="images/inspect_mapping.png" alt="定位建图结果对比">
+                <figcaption>图 2&nbsp;&nbsp;定位建图结果对比</figcaption>
             </figure>
 
             <p>在定位精度的定量评估中，长达数百米的巡检结束后，仅基于激光惯导（LI）或激光-可见光-惯导（LVI）的方案原点漂移量分别高达 5.3 m 和 8.7 m，而本项目提出的跨光谱融合方案（LVTI）将原点漂移量控制在了 0.2 m 以内，实现了完美闭环。</p>
@@ -215,16 +216,16 @@
             </table>
 
             <figure>
-                <img src="images/project/inspect_pr_curve.png" alt="融合前后目标识别 PR 曲线">
-                <figcaption>图 4.5&nbsp;&nbsp;融合前后目标识别 PR 曲线</figcaption>
+                <img src="images/inspect_pr_curve.png" alt="融合前后目标识别 PR 曲线">
+                <figcaption>图 3&nbsp;&nbsp;融合前后目标识别 PR 曲线</figcaption>
             </figure>
 
             <figure>
-                <img src="images/project/inspect_detection.png" alt="融合前后识别结果对比">
-                <figcaption>图 4.6&nbsp;&nbsp;融合前后识别结果对比</figcaption>
+                <img src="images/inspect_detection.png" alt="融合前后识别结果对比">
+                <figcaption>图 4&nbsp;&nbsp;融合前后识别结果对比</figcaption>
             </figure>
 
-            <p>在识别结果评估中，跨模态融合算法显著提升了目标检测精度。实验表明，融合后针对“管道”“仪表”和“阀门”的整体平均准确率均值（mAP50）从融合前的 0.854 提升至 0.908。上述高精度的定位与识别能力证明了本系统能够保障设备与机器人在长达数小时自主巡检中的双重安全。</p>
+            <p>在识别结果评估中，跨模态融合算法显著提升了目标检测精度。实验表明，融合后针对“管道”、“仪表”和“阀门”的整体平均准确率均值（mAP50）从融合前的 0.854 提升至 0.908。上述高精度的定位与识别能力证明了本系统能够保障设备与机器人在长达数小时自主巡检中的双重安全。</p>
 
             <a href="index.html" class="back-link">← 返回主页</a>
 
