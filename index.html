@@ -13,6 +13,24 @@
 
         <script src="js/jquery-3.0.0.min.js" type="text/javascript"></script>
         <script src="js/jquery.tagcanvas.js" type="text/javascript"></script>
+
+        <style>
+            @keyframes heartbeat {
+                0% { transform: scale(1); }
+                15% { transform: scale(1.25); }
+                30% { transform: scale(1); }
+                45% { transform: scale(1.25); }
+                60% { transform: scale(1); }
+                100% { transform: scale(1); }
+            }
+            .dynamic-icon {
+                display: inline-block;
+                animation: heartbeat 2s infinite; /* 2秒循环一次跳动动画 */
+                margin-right: 8px;
+                font-size: 1.1em;
+                vertical-align: text-bottom;
+            }
+        </style>
     </head>
     <body>
         <div class="main">
@@ -103,6 +121,9 @@
                         <h2>新闻<span style="color: #ff6b6b; margin-right: 8px;">📢</span></h2>
                         <div style="height: 400px; overflow-y: auto; padding-right: 10px;"> 
                             <ul class="news-content">
+                                <li>
+                                    2026.07，实验室一篇论文被机器人领域顶级期刊《IEEE Transactions on Industrial Electronics》接收。<span class="dynamic-icon">🎉</span>
+                                </li>
                                 <li>
                                     2026.07，实验室一篇论文被多媒体领域顶级会议《ACM International Conference on Multimedia》接收。<span style="color: #ff6b6b; margin-right: 8px;">🎉</span>
                                 </li>

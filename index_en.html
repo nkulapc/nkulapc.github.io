@@ -13,6 +13,24 @@
 
         <script src="js/jquery-3.0.0.min.js" type="text/javascript"></script>
         <script src="js/jquery.tagcanvas.js" type="text/javascript"></script>
+
+        <style>
+            @keyframes heartbeat {
+                0% { transform: scale(1); }
+                15% { transform: scale(1.25); }
+                30% { transform: scale(1); }
+                45% { transform: scale(1.25); }
+                60% { transform: scale(1); }
+                100% { transform: scale(1); }
+            }
+            .dynamic-icon {
+                display: inline-block;
+                animation: heartbeat 2s infinite; /* 2秒循环一次跳动动画 */
+                margin-right: 8px;
+                font-size: 1.1em;
+                vertical-align: text-bottom;
+            }
+        </style>
     </head>
     <body>
         <div class="main">
@@ -101,6 +119,9 @@
                         <h2>News<span style="color: #ff6b6b; margin-right: 8px;">📢</span></h2>
                         <div style="height: 400px; overflow-y: auto; padding-right: 10px;"> 
                             <ul class="news-content">
+                                <li>
+                                    July 2026: One of our lab's papers was accepted for the top-tier journal "IEEE Transactions on Industrial Electronics" in the field of robotics.<span class="dynamic-icon">🎉</span>
+                                </li>
                                 <li>
                                     July 2026: One of our lab's papers was accepted for the top conference "ACM International Conference on Multimedia" in multimedia.<span style="color: #ff6b6b; margin-right: 8px;">🎉</span>
                                 </li>
